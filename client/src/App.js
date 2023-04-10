@@ -4,12 +4,16 @@ import ListHeader from "./components/ListHeader"
 import ListItem from "./components/ListItem"
 import {useCookies} from 'react-cookie'
 import Sidenav from './components/Sidenav';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from "./components/Dashboard";
 import Explore from "./Pages/Explore";
 import Home from "./Pages/Home";
 import Settings from "./Pages/Settings";
 import Statistics from "./Pages/Statistics";
+// import Navbar from './components/navBar2';
+import Reports from './Pages/Reports';
+import Products from './Pages/Products';
+import Navbar from './components/Navbar';
 
 const App = () => {
   const [cookies, setCookies, removeCookie] = useCookies(null)
@@ -39,23 +43,28 @@ const App = () => {
 
   return (
     <div className="app">
-      {!authToken && <Auth/>}
+      {!authToken && 
+      <>
+      <div className="testingAuth">
+      <Auth/>
+      </div>
+      </>
+      }
+
       {authToken && 
       <>
       <ListHeader listName={'Leads'} getData={getData} />
       {/* <p>Welcome back {userEmail}</p> */}
       {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData} />)}
+      {/* <BrowserRouter>
+        <Navbar />
+        <Routes> 
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </BrowserRouter> */}
       </>}
-      {/* <p className="copyright">Creative Coding LLC</p> */}
-      <Sidenav/>
-      {/* <main>
-      <Routes>
-        <Route  path="/" element={<Home />}/>
-        <Route path="/explore" element={<Explore />} />
-        <Route path="/statistics" element={<Statistics />}/>
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-      </main> */}
     </div>
   )
 }

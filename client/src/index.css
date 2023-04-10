@@ -21,9 +21,14 @@ body{
     display: flex;
     flex-direction: column;
     padding: 0 15px 0 15px;
-    background-color: rgb(45, 45, 45);
-    border-radius: 30px;
-    opacity: 0.95;
+    /* background-color: rgb(45, 45, 45); */
+    border-radius: 20px;
+    /* opacity: 0.95; */
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
     
 }
 span{
@@ -102,7 +107,7 @@ label a{
 body {
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     display: flex;
     justify-content: center;
     /* font-family: 'Trebuchet MS', Arial, sans-serif; */
@@ -116,11 +121,9 @@ body {
 .app {
     background-color: white; 
     box-shadow: rgba(0,0,0,0.05) 0 6px 24px, rgba(0,0,0,0.08) 0 0 0 1px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 1300px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    border-radius: 12px;
+    width: 1425px;
+    /* height: 800px; */
 }
 
 .list-header {
@@ -310,7 +313,9 @@ input {
 .auth-options {
     display: flex;
     padding: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .auth-options button {
@@ -318,8 +323,10 @@ input {
     align-items: center;
     width: 25%;
     border: none;
-    padding: 10px;
+    padding: 5px;
     color: rgb(35, 38, 47);
+    border-radius: 12px;
+
 } 
 
 .copyright {
@@ -371,9 +378,24 @@ input {
 }
 
 
+.testingAuth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("sean-pollock-PhYq704ffdA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
 
-
-
+.top {
+    border-radius: 12px;
+    margin-top: 10px;
+    color: black !important;
+}
 
 
 

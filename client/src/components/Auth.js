@@ -45,7 +45,7 @@ const Auth = () => {
         <div class="container">
           <form>
             <div class="top">
-              <header>{isLogIn ? 'Please log in' : 'Please sign up'}</header>
+              <header>{isLogIn ? 'Login' : 'Sign up'}</header>
             </div>
 
             <div class="input-field">
