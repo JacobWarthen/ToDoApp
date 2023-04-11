@@ -121,8 +121,7 @@ body {
 .app {
     background-color: white; 
     box-shadow: rgba(0,0,0,0.05) 0 6px 24px, rgba(0,0,0,0.08) 0 0 0 1px;
-    border-radius: 12px;
-    width: 1425px;
+    width: 1440px;
     /* height: 800px; */
 }
 
@@ -397,7 +396,12 @@ input {
     color: black !important;
 }
 
-
+.testingDashboard {
+    padding-top: 10px;
+    /* margin-top: 10px; */
+    border-radius: 12px;
+    /* margin: 10px; */
+}
 
 
 
@@ -441,4 +445,13 @@ input {
     border: none;
     cursor: pointer;
     padding-left: 20px;
+}
+
+.testingNav {
+    height: 0px;
+    z-index: -1;
+}
+
+.testingLists {
+    margin-left: 100px;
 }

@@ -13,7 +13,8 @@ import Statistics from "./Pages/Statistics";
 // import Navbar from './components/navBar2';
 import Reports from './Pages/Reports';
 import Products from './Pages/Products';
-import Navbar from './components/Navbar';
+import Navbar from './components/navBar2';
+import Carousel from "./components/Carousel";
 
 const App = () => {
   const [cookies, setCookies, removeCookie] = useCookies(null)
@@ -53,17 +54,19 @@ const App = () => {
 
       {authToken && 
       <>
-      <ListHeader listName={'Leads'} getData={getData} />
-      {/* <p>Welcome back {userEmail}</p> */}
-      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData} />)}
-      {/* <BrowserRouter>
-        <Navbar />
-        <Routes> 
-          <Route path="/" element={<Home />} />
-          <Route path="/explore" element={<Explore />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
-      </BrowserRouter> */}
+      <div className="testingDashboard">
+        <div className="testingNav">
+          <Navbar />
+        </div>
+        <div className="testingLists">
+          <div className="testingListHeader">
+            <ListHeader listName={'Leads'} getData={getData} />
+          </div>
+          <div className="testingListItem">
+            {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData} />)}
+          </div>
+        </div>
+      </div>
       </>}
     </div>
   )

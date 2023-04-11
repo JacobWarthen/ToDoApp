@@ -1,6 +1,8 @@
 import Modal from "./Modal"
 import {useState} from 'react'
 import {useCookies} from 'react-cookie'
+import Navbar from './navBar2';
+
 
 const ListHeader = ( {listName, getData }) => {
   const [cookies, setCookie, removeCookie] = useCookies(null)

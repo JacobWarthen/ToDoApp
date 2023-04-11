@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return(
-        <div style={{width: '100%', height: '100vh'}}>
+        <div className="navBar" style={{width: '100%', height: '100vh'}}>
             <nav>
                 <div className="burger-menu" onClick={updateMenu}>
                     <div className={burger_class} ></div>
@@ -31,7 +31,14 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <div className={menu_class}></div>
+            <div className={menu_class}>
+                <div className="menu-item">
+                    <button className="item">Dashboard</button><br/>
+                    <button className="item">Reports</button><br />
+                    <button className="item">Settings</button>
+                    
+                </div>
+            </div>
         </div>
     )
 }
